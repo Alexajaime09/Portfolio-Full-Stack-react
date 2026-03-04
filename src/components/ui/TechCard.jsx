@@ -1,3 +1,5 @@
+import React from "react";
+
 const TachCard = ({ name, features, tags }) => {
   const icons = {
     HTML: "fa-brands fa-html5",

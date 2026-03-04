@@ -1,5 +1,6 @@
+import React from "react";
 import alexaImage from "../../assets/alexa.jpg";
-import { about } from "../../data";
+import { about } from "../../data/index";
 
 const About = () => {
   const { title, greeting, content, photoAlt } = about;

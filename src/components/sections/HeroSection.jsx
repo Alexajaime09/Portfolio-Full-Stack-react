@@ -6,7 +6,7 @@ const HeroSection = () => {
 
   return (
     <div className="w-full min-h-screen md:min-h-full bg-bg flex flex-col relative ">
-      <div className="bg-[linear-gradient(180deg,#1e1e1f_0%,#121212_60%,#0b0b0b_100%)] w-full h-full grid  grid-cols-1 p-8  md:grid-cols-[1.35fr_0.65fr] gap-y-[80px]   ">
+      <div className="bg-[linear-gradient(180deg,#1e1e1f_0%,#121212_60%,#0b0b0b_100%)] w-full h-full grid  grid-cols-1 p-8  md:grid-cols-[1.35fr_0.65fr] gap-y-[80px]">
         <div className="  flex flex-col justify-center items-start  order-2 md:order-1 ">
           <h1 className="text-[60px] md:text-[70px] lg:text-[120px] text-white font-secondary font-bold ">
             {headline}
