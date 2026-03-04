@@ -30,8 +30,8 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex items-center order-1 md:order-2 ">
-          <img className=" w-full md:w-[90%] " src={movil} alt="" />
+        <div className="flex items-center justify-center order-1 md:order-2 ">
+          <img className=" w-[90%] h-auto md:w-[90%] " src={movil} alt="" />
         </div>
       </div>
     </div>
