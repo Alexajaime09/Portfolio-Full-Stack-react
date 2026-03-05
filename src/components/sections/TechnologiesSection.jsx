@@ -6,7 +6,7 @@ const TechnologiesSection = () => {
   return (
     <div
       id="technologies"
-      className="flex flex-col w-full min-h-full items-center justify-center "
+      className="flex flex-col w-full min-h-full items-center justify-center scroll-mt-24  "
     >
       <h3 className=" text-white text-[35px] md:text-[48px] lg:text-[63px]  font-normal font-main  ">
         Technologies
