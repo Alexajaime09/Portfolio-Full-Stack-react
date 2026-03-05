@@ -4,7 +4,10 @@ import { technologies } from "../../data/index";
 
 const TechnologiesSection = () => {
   return (
-    <div className="flex flex-col w-full min-h-full items-center justify-center ">
+    <div
+      id="technologies"
+      className="flex flex-col w-full min-h-full items-center justify-center "
+    >
       <h3 className=" text-white text-[35px] md:text-[48px] lg:text-[63px]  font-normal font-main  ">
         Technologies
       </h3>

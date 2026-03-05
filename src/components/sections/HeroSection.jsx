@@ -31,7 +31,14 @@ const HeroSection = () => {
         </div>
 
         <div className="flex items-center justify-center order-1 md:order-2 ">
-          <img className=" w-[90%] h-auto md:w-[90%] " src={movil} alt="" />
+          <img
+            className=" w-[90%] h-auto 
+             [filter:drop-shadow(0_25px_60px_rgba(0,0,0,0.8))_
+             drop-shadow(0_0px_40px_rgba(255,255,255,0.18))] 
+             animate-levitate "
+            src={movil}
+            alt="hero-image"
+          />
         </div>
       </div>
     </div>

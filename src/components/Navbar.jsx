@@ -34,8 +34,17 @@ const Navbar = () => {
         </a>
         <ul className="hidden items-center gap-10 text-sm text-white/80 md:flex">
           {navbar.map(({ id, href, label }) => (
-            <li key={id}>
-              <a href={href} className="transition hover:text-white font-main">
+            <li
+              className="transition-all duration-300 hover:-translate-y-1 "
+              key={id}
+            >
+              <a
+                href={href}
+                className=" hover:bg-white/10 hover:text-white 
+                inline-block  rounded-[5px]  px-3 py-2 text-[20px] font-main
+                transition-all duration-300 ease-out
+                hover:shadow-[0_4px_12px_rgba(255,255,255,0.1)]"
+              >
                 {label}
               </a>
             </li>
@@ -49,14 +58,9 @@ const Navbar = () => {
           aria-expanded={open}
           onClick={() => setOpen((swiitch) => !swiitch)}
         >
-          <span className="block h-[2px] w-5 bg-white/90 relative">
-            <span
-              className={`absolute left-0 top-[-6px] h-[2px] w-5 bg-white/90 transition ${open ? "translate-y-[6px] rotate-45" : ""}`}
-            />
-            <span
-              className={`absolute left-0 top-[6px] h-[2px] w-5 bg-white/90 transition ${open ? "translate-y-[-6px] -rotate-45" : ""}`}
-            />
-          </span>
+          <i
+            className={`text-[#8a99c5] text-[15px]  ${open === true ? "fa-solid fa-xmark" : "fa-solid fa-ellipsis"}`}
+          ></i>
         </button>
 
         {open && (
@@ -66,7 +70,7 @@ const Navbar = () => {
                 <li key={id}>
                   <a
                     href={href}
-                    className="block rounded-xl px-3 py-2 transition hover:bg-white/10 hover:text-white"
+                    className="block rounded-[5px] px-3 py-2 transition hover:bg-white/10 hover:text-white"
                     onClick={handleLinkClick}
                   >
                     {label}

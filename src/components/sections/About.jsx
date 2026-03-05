@@ -15,7 +15,7 @@ const About = () => {
           <img
             className=" w-full h-full object-cover rounded-full  "
             src={alexaImage}
-            alt=""
+            alt={photoAlt}
           />
         </div>
         <div className=" text-white flex items-center justify-center p-7   ">
