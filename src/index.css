@@ -1,24 +1,49 @@
 @config "../tailwind.config.js";
 @import "tailwindcss";
 
-@theme {
-  --animate-levitate: levitate 3s ease-in-out infinite;
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
 
-  @keyframes levitate {
-    0% {
-      transform: translateY(0);
-    }
+  50% {
+    transform: translateY(-5px);
+  }
 
-    50% {
-      transform: translateY(-5px);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
   }
 }
 
+@keyframes fadeUp {
+  0% {
+    transform: translateY(40px) scale(0.7);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px) scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+}
+
+@theme {
+  --animate-levitate: levitate 3s ease-in-out infinite;
+  --animate-fadeUp: fadeUp 1.5s ease both;
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+}
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: var(--animate-fadeUp);
+}
 html {
   scroll-behavior: smooth;
 }

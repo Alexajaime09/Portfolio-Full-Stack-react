@@ -8,7 +8,7 @@ const TechnologiesSection = () => {
       id="technologies"
       className="flex flex-col w-full min-h-full items-center justify-center scroll-mt-24  "
     >
-      <h3 className=" text-white text-[35px] md:text-[48px] lg:text-[63px]  font-normal font-main  ">
+      <h3 className=" text-white text-[35px] md:text-[48px] lg:text-[63px]  font-normal font-main mb-15  ">
         Technologies
       </h3>
       <div className="p-8 w-full min-h-full grid grid-cols-[repeat(auto-fit,_260px)]  justify-center items-center gap-9 lg:gap-16 bg-bg ">
