@@ -12,7 +12,7 @@ const HeroSection = () => {
           <h1 className=" text-[70px] lg:text-[120px] text-white font-secondary font-bold  ">
             {headline}
           </h1>
-          <h2 className="text-[45px] md:text-[68] lg-[90px] font-secondary font-light text-[#cecece] ">
+          <h2 className="text-[42px] md:text-[68] lg-[90px] font-secondary font-light text-[#cecece] ">
             {subheadline}
           </h2>
           <p className=" text-[21px] md:text-[26px] lg:text-[30px] font-secondary font-thin text-[#929292]  ">
