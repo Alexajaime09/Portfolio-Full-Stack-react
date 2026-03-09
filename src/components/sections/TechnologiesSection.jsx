@@ -1,6 +1,7 @@
 import React from "react";
-import TachCard from "../ui/TechCard";
+import TechCard from "../ui/TechCard";
 import { technologies } from "../../data/index";
+import Carrusel from "../ui/Carrusel";
 
 const TechnologiesSection = () => {
   return (
@@ -11,10 +12,8 @@ const TechnologiesSection = () => {
       <h3 className=" text-white text-[35px] md:text-[48px] lg:text-[63px]  font-normal font-main mb-15  ">
         Technologies
       </h3>
-      <div className="p-8 w-full min-h-full grid grid-cols-[repeat(auto-fit,_260px)]  justify-center items-center gap-9 lg:gap-16 bg-bg ">
-        {technologies.map((tech) => (
-          <TachCard key={tech.id} {...tech} />
-        ))}
+      <div className="flex w-full min-h-full  px-8 ">
+        <Carrusel />
       </div>
     </div>
   );
