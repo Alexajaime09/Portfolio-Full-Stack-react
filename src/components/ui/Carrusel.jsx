@@ -37,9 +37,16 @@ const Carrusel = () => {
         },
       }}
       navigation
+      pagination={{
+        type: "bullets",
+      }}
       onSlideChange={() => console.log("silde change")}
       allowSlideNext={true}
       allowSlidePrev={true}
+      style={{
+        "--swiper-navigation-color": "#EAE9E5",
+        "--swiper-pagination-color": "#EAE9E5",
+      }}
     >
       {technologies.map((tech) => (
         <SwiperSlide key={tech.id}>
