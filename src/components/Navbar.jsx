@@ -20,8 +20,8 @@ const Navbar = () => {
   return (
     <header className="fixed left-0 right-0 top-4 z-50 px-4">
       <nav
-        className="mx-auto flex max-w-6xl items-center justify-around rounded-2xl bg-[rgba(15,15,15,0.5)] px-4
-        py-3 backdrop-blur-md border-[rgba(255,255,255,0.18)] border-[1px] "
+        className="mx-auto flex max-w-6xl items-center justify-around rounded-2xl px-4   py-3
+      bg-[rgba(15,15,15,0.5)] backdrop-blur-md border-[rgba(255,255,255,0.18)] border-[1px] "
       >
         <a href="#home" className="flex items-center gap-2">
           <div className=" flex items-center justify-center w-[60px]  w-[55px] h-max-[61px] h-min-[56px] p-2 bg-[rgb(0,0,0)] rounded-[15px] ">
@@ -59,7 +59,7 @@ const Navbar = () => {
           onClick={() => setOpen((swiitch) => !swiitch)}
         >
           <i
-            className={`text-[#8a99c5] text-[15px]  ${open === true ? "fa-solid fa-xmark" : "fa-solid fa-ellipsis"}`}
+            className={`text-white text-[15px]  ${open === true ? "fa-solid fa-xmark" : "fa-solid fa-ellipsis"}`}
           ></i>
         </button>
 
@@ -70,7 +70,7 @@ const Navbar = () => {
                 <li key={id}>
                   <a
                     href={href}
-                    className="block rounded-[5px] px-3 py-2 transition hover:bg-white/10 hover:text-white"
+                    className="block rounded-[5px] px-3 py-2 transition hover:bg-white/10 hover:text-white font-main"
                     onClick={handleLinkClick}
                   >
                     {label}

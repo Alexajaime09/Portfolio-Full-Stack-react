@@ -6,7 +6,7 @@ export default {
     extend: {
       fontFamily: {
         main: ["Quicksand", "sans-serif"],
-        secondary: ["Outfit", "sans-serif"],
+        secondary: ["Cinzel Decorative", "sans-serif"],
         third: ["Maven Pro", "sans-serif"],
       },
       colors: {

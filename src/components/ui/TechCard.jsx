@@ -10,8 +10,9 @@ const TachCard = ({ name, features, tags }) => {
 
   return (
     <div
-      className="flex flex-col w-[260px] h-[395px] my-0 mx-auto relative bg-[linear-gradient(90deg,#121212_0%,#151515_40%,#121212_100%)] rounded-[30px]
-      border-[#808080]
+      className="flex flex-col w-[260px] h-[395px] my-0 mx-auto relative 
+      bg-[linear-gradient(240deg,#242424_0%,#191919_40%,#030303_100%)]  
+      border-[#808080] border-[1px]  rounded-[30px]
        border-1 before:content-[''] before:absolute before:top-0 
       before:left-1/2 before:-translate-x-1/2 before:w-[55px] before:h-[40px]
       before:bg-[linear-gradient(to_left,#e5bd5a,#a3791c)] before:rounded-bl-[5px] before:rounded-br-[5px] "
