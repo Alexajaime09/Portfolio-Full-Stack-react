@@ -1,11 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  EffectCoverflow,
-} from "swiper/modules";
+import { Pagination, Scrollbar, A11y, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -22,14 +16,14 @@ const Carrusel = () => {
   return (
     <Swiper
       className="text-[#EAE9E5]  "
-      modules={[Navigation, Pagination, EffectCoverflow]}
+      modules={[Pagination, EffectCoverflow]}
       spaceBetween={10}
       slidesPerView={1}
       centeredSlides={true}
       breakpoints={{
         720: {
           slidesPerView: 3,
-          spaceBetween: 300,
+          spaceBetween: 100,
           centeredSlides: true,
         },
       }}
