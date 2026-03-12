@@ -30,9 +30,22 @@
   }
 }
 
+@keyframes TextfedeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.5);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @theme {
   --animate-levitate: levitate 3s ease-in-out infinite;
   --animate-fadeUp: fadeUp 1.5s ease both;
+  --animate-TextfedeUp: TextfedeUp 3s ease;
 }
 
 .timeline-item {

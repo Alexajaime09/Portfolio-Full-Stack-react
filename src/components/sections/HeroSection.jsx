@@ -9,7 +9,10 @@ const HeroSection = () => {
     <div className="w-full min-h-screen md:min-h-full bg-bg flex flex-col relative ">
       <div className="bg-[linear-gradient(180deg,#1e1e1f_0%,#121212_60%,#0b0b0b_100%)] w-full h-full grid  grid-cols-1 p-8  md:grid-cols-[1.35fr_0.65fr] gap-y-[80px]">
         <div className="  flex flex-col justify-center items-start  order-2 md:order-1 gap-6 md:gap-2 lg:gap-6 ">
-          <h1 className=" text-[70px] lg:text-[120px] text-[#EAE9E5]  font-secondary font-bold  ">
+          <h1
+            className=" text-[70px] lg:text-[120px] text-[#EAE9E5]  font-secondary font-bold 
+             animate-TextfedeUp"
+          >
             {headline}
           </h1>
           <h2 className="text-[42px] md:text-[68] lg-[90px] font-main font-light text-[#cecece] ">
