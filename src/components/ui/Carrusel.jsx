@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Scrollbar, A11y, EffectCoverflow } from "swiper/modules";
+import { Pagination, EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,7 +16,7 @@ const Carrusel = () => {
   return (
     <Swiper
       className="text-[#EAE9E5]  "
-      modules={[Pagination, EffectCoverflow]}
+      modules={[Pagination, EffectCoverflow, Autoplay]}
       spaceBetween={10}
       slidesPerView={1}
       centeredSlides={true}
@@ -50,8 +50,15 @@ const Carrusel = () => {
         slideShadows: false,
         stretch: 0,
       }}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+        reverseDirection: false,
+        waitForTransition: true,
+      }}
     >
-      {copy.map((tech) => (
+      {technologies.map((tech) => (
         <SwiperSlide key={tech.id}>
           <TechCard {...tech} />
         </SwiperSlide>

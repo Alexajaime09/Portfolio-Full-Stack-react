@@ -1,7 +1,7 @@
 export const heroData = {
-  headline: "Design & Code",
+  headline: "Code & Design",
   subheadline: "Product-minded",
-  tagline: "Design and code that connect people and artificial intelligence ",
+  tagline: "Code and design that connect people and artificial intelligence ",
   ctas: [
     { label: "explore +", href: "#main-project", variant: "ghost" },
     {
