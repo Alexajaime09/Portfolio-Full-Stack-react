@@ -1,6 +1,7 @@
 import { heroData } from "../../data/index";
 import movil from "../../assets/movil.png";
 import Button from "../ui/Button";
+import movil3 from "../../assets/movil3.png";
 
 const HeroSection = () => {
   const { headline, subheadline, tagline, ctas } = heroData;
@@ -34,7 +35,7 @@ const HeroSection = () => {
              [filter:drop-shadow(0_25px_60px_rgba(0,0,0,0.8))_
              drop-shadow(0_0px_40px_rgba(255,255,255,0.18))] 
              animate-levitate "
-            src={movil}
+            src={movil3}
             alt="hero-image"
           />
         </div>

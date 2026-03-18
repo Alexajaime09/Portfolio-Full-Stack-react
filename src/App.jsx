@@ -4,6 +4,7 @@ import HeroSection from "./components/sections/HeroSection";
 import About from "./components/sections/About";
 import TechnologiesSection from "./components/sections/TechnologiesSection";
 import Navbar from "./components/Navbar";
+import Contact from "./components/sections/Contact";
 
 function App() {
   useEffect(() => {
@@ -43,6 +44,9 @@ function App() {
         <section id="technologies" className=" timeline-item ">
           <TechnologiesSection />
         </section>
+        <footer id="contact" className=" timeline-item ">
+          <Contact />
+        </footer>
       </div>
     </div>
   );

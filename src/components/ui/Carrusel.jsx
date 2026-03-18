@@ -58,7 +58,7 @@ const Carrusel = () => {
         waitForTransition: true,
       }}
     >
-      {technologies.map((tech) => (
+      {copy.map((tech) => (
         <SwiperSlide key={tech.id}>
           <TechCard {...tech} />
         </SwiperSlide>

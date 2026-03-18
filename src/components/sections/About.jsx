@@ -29,7 +29,7 @@ const About = () => {
             alt={photoAlt}
           />
         </div>
-        <div className=" text-[#191919;] flex items-center justify-center p-7   ">
+        <div className=" text-[#191919] flex items-center justify-center p-7   ">
           <p className="text-xl font-light font-main leading-relaxed max-w-prose ">
             <span className="text-3xl font-[Outfit]">{greeting}</span> ,{" "}
             {content}
