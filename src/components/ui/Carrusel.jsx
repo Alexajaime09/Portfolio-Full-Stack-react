@@ -21,10 +21,22 @@ const Carrusel = () => {
       slidesPerView={1}
       centeredSlides={true}
       breakpoints={{
-        720: {
+        768: {
+          slidesPerView: 1.5,
+          spaceBetween: 30,
+        },
+        1024: {
           slidesPerView: 3,
-          spaceBetween: 100,
+          spaceBetween: 10,
           centeredSlides: true,
+          coverflowEffect: {
+            rotate: 25,
+            depth: 50,
+            modifier: 1,
+            scale: 0.7,
+            slideShadows: false,
+            stretch: 0,
+          },
         },
       }}
       navigation

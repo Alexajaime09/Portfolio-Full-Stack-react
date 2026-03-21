@@ -30,7 +30,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex w-full min-h-full pb-20 flex-col gap-b-9 bg-[rgb(12,12,12)] ">
+    <div className="flex w-full min-h-[100dvh] pb-20 flex-col gap-b-9 bg-[rgb(12,12,12)] ">
       <section>
         <Navbar />
       </section>

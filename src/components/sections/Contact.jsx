@@ -6,8 +6,8 @@ const Contact = () => {
   const { headline, email, linkedin } = contact;
   return (
     <div
-      className=" w-full h-[250px] grid place-items-center bg-[#EAE9E5]  text-[#242423]
-    relative px-8  scroll-mt-35"
+      className=" w-full min-h-[250px] grid place-items-center bg-[#EAE9E5]  text-[#242423]
+    relative px-8 pb-6  scroll-mt-35 "
     >
       <h3 className="  text-[35px] md:text-[48px] lg:text-[63px]  font-normal font-main  py-7">
         Contact
