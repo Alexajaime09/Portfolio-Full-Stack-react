@@ -8,11 +8,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const oneRize = () => {
-      if (window.innerHeight >= 768) setOpen(false);
+      if (window.innerWidth >= 768) setOpen(false);
     };
 
-    window.addEventListener("resize", oneRize);
-    return () => window.removeEventListener("resize", oneRize);
+    oneRize();
   }, []);
 
   const handleLinkClick = () => setOpen(false);
@@ -53,7 +52,8 @@ const Navbar = () => {
 
         <button
           type="button"
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-black/30 text-white"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-black/30 text-white
+          m-4 "
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((swiitch) => !swiitch)}

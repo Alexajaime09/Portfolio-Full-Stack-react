@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 import movil3 from "../../assets/movil3.png";
 
 const HeroSection = () => {
-  const { headline, subheadline, tagline, ctas } = heroData;
+  const { headline, headline2, subheadline, tagline, ctas } = heroData;
 
   return (
     <div className="w-full min-h-screen md:min-h-full bg-bg flex flex-col relative ">
@@ -15,6 +15,12 @@ const HeroSection = () => {
              animate-TextfedeUp"
           >
             {headline}
+          </h1>
+          <h1
+            className=" text-[70px] lg:text-[120px] text-[#EAE9E5]  font-secondary font-bold 
+             animate-TextfedeUp"
+          >
+            {headline2}
           </h1>
           <h2 className="text-[42px] md:text-[68] lg-[90px] font-main font-light text-[#cecece] ">
             {subheadline}

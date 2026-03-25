@@ -30,7 +30,10 @@ function App() {
   }, []);
 
   return (
-    <div className="flex w-full min-h-[100dvh] pb-20 flex-col gap-b-9 bg-[rgb(12,12,12)] ">
+    <div
+      className="flex w-full min-h-[100dvh] pb-20 flex-col gap-b-9 bg-[#0b0b0b] 
+  bg-[radial-gradient(circle_at_20%_30%,rgba(255,215,0,0.08),transparent_40%),radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.04),transparent_50%)] "
+    >
       <section>
         <Navbar />
       </section>
