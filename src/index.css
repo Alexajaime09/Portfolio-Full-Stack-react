@@ -54,10 +54,22 @@
   }
 }
 
+@keyframes size {
+  0% {
+    scale: 0.8;
+    opacity: 30%;
+  }
+  100% {
+    scale: 1;
+    opacity: 100%;
+  }
+}
+
 @theme {
   --animate-levitate: levitate 3s ease-in-out infinite;
   --animate-fadeUp: fadeUp 0.5s ease both;
   --animate-TextfedeUp: TextfedeUp 3s ease;
+  --animate-size: size 2s ease infinite;
 }
 
 .timeline-item {

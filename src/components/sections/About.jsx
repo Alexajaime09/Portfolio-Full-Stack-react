@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import alexaImage from "../../assets/alexa.jpg";
 import { about } from "../../data/index";
 import { about2 } from "../../data/about";
@@ -6,11 +7,19 @@ import car from "../../assets/car.svg";
 
 const About = () => {
   const { title, greeting, content, photoAlt } = about;
-  // const {
-  //   marketing: { title: marketingTitle, content: marketingContent },
-  //   design: { title: designTitle, content: designContent },
-  //   softwareDevelopment: { title: softwareTitle, content: softwareContent },
-  // } = about2;
+  const [move, setMove] = useState(0);
+
+  const nextMove = () => {
+    setMove((prev) => prev + 200);
+  };
+
+  const [step, setStep] = useState(0);
+  const nextStep = () => {
+    setStep((prev) => {
+      console.log(step);
+      return prev + 1;
+    });
+  };
 
   return (
     <div
@@ -47,10 +56,24 @@ const About = () => {
           </p>
         </div>
       </div>
+      <div>
+        <p
+          className="text-3xl font-medium font-main leading-relaxed max-w-prose text-center
+        text-[#e5e5e5] pb-6"
+        >
+          Areas Keys
+        </p>
+        <p
+          className="text-xl font-medium font-main leading-relaxed max-w-prose
+        animate-size text-[#efddc0]"
+        >
+          Click the circules of the traffic lights. Start with the red
+        </p>
+      </div>
 
       {/* main container trafficlights */}
 
-      <div className="font-semibold flex py-12 text-[10px] md:text-[14px] ">
+      <div className="font-semibold flex py-12 text-[10px] md:text-[14px] z-10 ">
         <div
           className="relative p-3 rounded-[40px] bg-[#201f1f] backdrop-blur-md text-white
       "
@@ -60,34 +83,59 @@ const About = () => {
              bg-[length:120%_100%] flex items-center justify-center 
              shadow-[0_4px_0px_rgba(0,0,0,0.5)] gap-[clamp(30px,4vw,48px)] "
           >
-            <div className="w-[clamp(50px,15vw,85px)] h-[clamp(50px,15vw,85px)] 85px] bg-[#AE3846] rounded-full  flex justify-center items-center ">
+            <button
+              onClick={nextStep}
+              className="w-[clamp(50px,15vw,85px)] h-[clamp(50px,15vw,85px)] 85px] bg-[#AE3846] rounded-full 
+            hover flex justify-center items-center shadow-[0_5px_5px_rgba(0,0,0,0.5)]   "
+            >
               <p className="font-main ">Marketing</p>
-            </div>
-            <div className="w-[clamp(50px,15vw,85px)] h-[clamp(50px,15vw,85px)] bg-[#089494] rounded-full flex justify-center items-center   ">
+            </button>
+            <button
+              onClick={nextStep}
+              className="w-[clamp(50px,15vw,85px)] h-[clamp(50px,15vw,85px)] bg-[#089494] rounded-full 
+            hover flex justify-center items-center shadow-[0_5px_5px_rgba(0,0,0,0.5)]   "
+            >
               <p className="font-main ">Design</p>
-            </div>
-            <div className="w-[clamp(50px,15vw,85px)] h-[clamp(50px,15vw,85px)] bg-[#6c9031] rounded-full flex justify-center items-center  ">
+            </button>
+            <button
+              onClick={nextStep}
+              className="w-[clamp(50px,15vw,85px)] h-[clamp(50px,15vw,85px)] bg-[#6c9031] rounded-full 
+             hover flex justify-center items-center shadow-[0_5px_5px_rgba(0,0,0,0.5)]   "
+            >
               <p className="font-main ">Software</p>
-            </div>
+            </button>
           </div>
         </div>
       </div>
       {/* car and text container */}
-      <div className="flex  w-full h-[600px]  ">
+      <div className="flex  w-full min-h-[100dvh] pb-20 ">
         <div className="basis-1/4 md:basis-1/2 pr-8 ">
           <div className="w-auto h-[180px] flex justify-end  ">
-            <img src={car} alt="" />
+            <img
+              className={`rotate-180 transition-all ease-out delay-1000 duration-2000  ${step === 1 ? " translate-y-[0]  opacity-100" : step === 2 ? " translate-y-[300px]  lg:translate-y-[200px] opacity-100 " : step === 3 ? "translate-y-[520px]   lg:translate-y-[400px] opacity-100" : "-translate-y-[300px] opacity-0 "} `}
+              src={car}
+              alt="car"
+            />
           </div>
         </div>
         <div
           className="basis-3/4 md:basis-1/2 pl-8  border-l-amber-50 border-l-2 flex 
-        flex-col gap-35 text-[20px]"
+        flex-col gap-35 text-[20px] "
         >
-          {about2.map((area) => {
+          {about2.map((area, index) => {
             return (
-              <div className="flex flex-col">
-                <p className="text-[#e5e5e5] font-main">{area.title}</p>
-                <p className="text-[#acacac] font-main ">{area.content}</p>
+              <div className={`flex flex-col overflow-hidden `}>
+                <p
+                  className={`text-[#e5e5e5] font-main inline-block 
+                transition-all duration-1000  ${step >= index + 1 ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"} `}
+                >
+                  {area.title}
+                </p>
+                <p
+                  className={`text-[#acacac]  font-main inline-block  transition-all duration-1000  ${step >= index + 1 ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"} `}
+                >
+                  {area.content}
+                </p>
               </div>
             );
           })}
