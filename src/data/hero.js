@@ -1,6 +1,6 @@
 export const heroData = {
   headline: "Code",
-  headline2: "UI Design",
+  headline2: "& UI Design",
   subheadline: "Product-minded",
   tagline: "Code and design that connect people and artificial intelligence ",
   ctas: [

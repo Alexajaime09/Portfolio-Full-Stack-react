@@ -56,13 +56,13 @@
 
 @theme {
   --animate-levitate: levitate 3s ease-in-out infinite;
-  --animate-fadeUp: fadeUp 1.5s ease both;
+  --animate-fadeUp: fadeUp 0.5s ease both;
   --animate-TextfedeUp: TextfedeUp 3s ease;
 }
 
 .timeline-item {
   opacity: 0;
-  transform: translateY(40px) scale(0.9);
+  transform: translateY(50px) scale(0.7);
 }
 .timeline-item.show {
   opacity: 1;

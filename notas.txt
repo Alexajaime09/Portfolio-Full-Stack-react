@@ -1,0 +1,14 @@
+ bg-[rgb(12,12,12)] 
+
+ bg-[#EAE9E5] = fondo about
+
+ circulo about = shadow-[0_0_40px_rgba(0,0,0,0.25),0_0_25px_rgba(255,255,255,0.4)]
+
+ bg cards = bg-[linear-gradient(240deg,#242424_0%,#191919_40%,#030303_100%)]  
+ border cards = border-[#808080] border-[1px] 
+
+ bg circulo logos =  bg-[linear-gradient(to_left,#e5bd5a,#a3791c)] 
+
+ bg cuadrado = before:bg-[linear-gradient(to_left,#e5bd5a,#a3791c)] 
+
+
