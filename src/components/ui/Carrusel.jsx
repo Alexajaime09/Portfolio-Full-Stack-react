@@ -15,7 +15,7 @@ const copy = [...technologies, ...technologies];
 const Carrusel = () => {
   return (
     <Swiper
-      className="text-[#EAE9E5]  "
+      className="text-[#EAE9E5] w-full h-full  "
       modules={[Pagination, EffectCoverflow, Autoplay]}
       spaceBetween={10}
       slidesPerView={1}
@@ -49,9 +49,6 @@ const Carrusel = () => {
       onSlideChange={() => console.log("slide change")}
       allowSlideNext={true}
       allowSlidePrev={true}
-      style={{
-        "--swiper-navigation-color": "#EAE9E5",
-      }}
       effect="coverflow"
       loop={true}
       coverflowEffect={{

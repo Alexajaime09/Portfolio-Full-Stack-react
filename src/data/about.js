@@ -7,15 +7,15 @@ export const about = {
 };
 
 export const about2 = [
-  {
-    title: "Software Development",
-    content:
-      "Build scalable software that grows with the business and its users, delivering a seamless experience for both.",
-  },
+  { title: "Marketing", content: "Understand the user and market context" },
 
   {
     title: "Design",
     content: "Cominicate and convey the essence of the brand to uers",
   },
-  { title: "Marketing", content: "Understand the user and market context" },
+  {
+    title: "Software Development",
+    content:
+      "Build scalable software that grows with the business and its users, delivering a seamless experience for both.",
+  },
 ];

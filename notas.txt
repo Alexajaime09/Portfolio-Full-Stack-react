@@ -12,3 +12,66 @@
  bg cuadrado = before:bg-[linear-gradient(to_left,#e5bd5a,#a3791c)] 
 
 
+
+ ${step === 1 ? " translate-y-[0]  opacity-100" : step === 2 ? " translate-y-[300px]  lg:translate-y-[200px] opacity-100 " : step === 3 ? "translate-y-[520px]   lg:translate-y-[400px] opacity-100" : "-translate-y-[300px] opacity-0 "}
+
+
+ <Swiper
+      className="text-[#EAE9E5]  "
+      modules={[Pagination, EffectCoverflow, Autoplay]}
+      spaceBetween={10}
+      slidesPerView={1}
+      centeredSlides={true}
+      breakpoints={{
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          scale: 0.8,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          centeredSlides: true,
+          coverflowEffect: {
+            rotate: 25,
+            depth: 50,
+            modifier: 1,
+            scale: 0.7,
+            slideShadows: false,
+            stretch: 0,
+          },
+        },
+      }}
+      navigation
+      pagination={{
+        type: "fraction",
+        renderFraction: (currentClass, totalClass) => {
+          return `<span class='${currentClass}'></span> - <span class="${totalClass}"></span>`;
+        },
+      }}
+      allowSlidePrev={true}
+      allowSlideNext={true}
+      effect="coverflow"
+      loop={true}
+      coverflowEffect={{
+        rotate: 30,
+        depth: 100,
+        modifier: 1,
+        scale: 1,
+        slideShadows: false,
+        stretch: 0,
+      }}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+        reverseDirection: false,
+        waitForTransition: true,
+      }}
+    >
+      {images.map((img, index) => (
+        <SwiperSlide key={index}>
+          <DesignCard image={img} />
+        </SwiperSlide>
+      ))}
+    </Swiper>

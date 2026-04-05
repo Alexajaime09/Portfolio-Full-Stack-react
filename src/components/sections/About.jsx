@@ -67,7 +67,7 @@ const About = () => {
           className="text-xl font-medium font-main leading-relaxed max-w-prose
         animate-size text-[#efddc0]"
         >
-          Click the circules of the traffic lights. Start with the red
+          Click on the circules of the traffic light. Start with the red
         </p>
       </div>
 
@@ -112,7 +112,8 @@ const About = () => {
         <div className="basis-1/4 md:basis-1/2 pr-8 ">
           <div className="w-auto h-[180px] flex justify-end  ">
             <img
-              className={`rotate-180 transition-all ease-out delay-1000 duration-2000  ${step === 1 ? " translate-y-[0]  opacity-100" : step === 2 ? " translate-y-[300px]  lg:translate-y-[200px] opacity-100 " : step === 3 ? "translate-y-[520px]   lg:translate-y-[400px] opacity-100" : "-translate-y-[300px] opacity-0 "} `}
+              className={`rotate-180 transition-all ease-out delay-1000 duration-2000
+                 ${step === 0 ? "-translate-y-[300px] opacity-0 " : step === 1 ? " translate-y-[0]  opacity-100" : step === 2 ? " translate-y-[300px]  lg:translate-y-[200px] opacity-100 " : step === 3 ? "translate-y-[520px]   lg:translate-y-[400px] opacity-100" : ""}`}
               src={car}
               alt="car"
             />
